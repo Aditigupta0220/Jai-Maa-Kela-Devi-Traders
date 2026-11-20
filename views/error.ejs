@@ -1,0 +1,15 @@
+<%- include('partials/head') %>
+  <%- include('partials/navbar') %>
+    <%- include('partials/flash') %>
+      <div class="container mt-5">
+        <h1 class="display-4">Error <%= status %>
+        </h1>
+        <p class="lead">
+          <%= message %>
+        </p>
+        <% if (stack) { %>
+          <pre><code><%= stack %></code></pre>
+          <% } %>
+            <a href="/" class="btn btn-primary">Go Home</a>
+      </div>
+      <%- include('partials/footer') %>
